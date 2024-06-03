@@ -1,0 +1,188 @@
+$target-colors: (
+    "blue"$blue-color rgb(204, 227, 255) "80%",
+    "orange"$orange-color rgb(253, 236, 206) "55%",
+    "green"$green-color rgb(210, 244, 223) "75%"
+);
+
+@each $name, $color, $opacity, $width in $target-colors {
+    .targets {
+        .section {
+            &.#{$name} {
+                .icon {
+                    background-color: $opacity;
+
+                    i {
+                        color: $color;
+                    }
+                }
+
+                .content {
+                    .line {
+                        background-color: $opacity;
+
+                        span {
+                            background-color: $color;
+
+                            &::before {
+                                content: $width;
+                                background-color: $color;
+                            }
+
+                            &::after {
+                                border-color: $color transparent transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$reminders-colors: (
+    "blue"$blue-color,
+    "green"$green-color,
+    "orange"$orange-color,
+    "red"$red-color
+);
+
+@each $name, $color in $reminders-colors {
+    .reminders {
+        .info {
+
+            &.#{$name}::after,
+            &.#{$name}::before {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+$dash-social: (
+    "x-twitter" #000 rgb(0 0 0 / 20%),
+    "facebook" #1da1f2 rgb(24 119 242 / 20%),
+    "youtube" #ff0000 rgb(255 0 0 / 20%),
+    "linkedin" #0077b5 rgb(0 119 181 / 20%)
+);
+
+@each $name, $color, $opacity in $dash-social {
+    .social {
+        .#{$name} {
+            background-color: $opacity;
+
+            i,
+            a {
+                background-color: $color;
+            }
+
+            span {
+                color: $color;
+            }
+        }
+    }
+}
+
+$table-width: (
+    "name" 250px,
+    "data" 200px,
+    "client" 250px,
+    "price" 120px,
+    "imgs" 150px,
+    "color" 150px
+);
+
+@each $class, $width in $table-width {
+    .projects-table {
+        table {
+            thead th.#{$class},
+            tbody td.#{$class} {
+                width: $width;
+            }
+        }
+    }
+}
+
+$table-color: (
+    "red" $red-color,
+    "orange" $orange-color,
+    "green" $green-color,
+    "blue" $blue-color);
+
+@each $class, $color in $table-color {
+    .projects-table {
+        table {
+            tbody {
+                .color {
+                    .#{$class} {
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$plans-colors: (
+    "red" $red-color,
+    "orange" $orange-color,
+    "green" $green-color,
+    "blue" $blue-color
+);
+
+@each $name, $color in $plans-colors {
+    .plans {
+        .plan.#{$name} {
+            .title {
+                background-color: $color;
+                outline: 3px solid $color;
+            }
+            a {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+$friends-iconss: (
+    "friends": "\f118",
+    "projects": "\f386",
+    "articles": "\f1ea",
+);
+
+@each $class, $icon in $friends-iconss {
+    .friends {
+        .friends-cards {
+            .friend {
+                .icons {
+                    div.#{$class} {
+                        &::before {
+                            content: $icon;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$files-colors: (
+    "blue" $blue-color rgb(204, 227, 255),
+    "green" $green-color rgb(210, 244, 223),
+    "red" $red-color rgb(253, 217, 214),
+    "orange" $orange-color rgb(253, 236, 206),
+);
+
+@each $class, $color, $bg-color in $files-colors {
+    .files {
+        .files-holder {
+            .files-stats {
+                .#{$class} {
+                    i {
+                        color: $color;
+                        background-color: $bg-color;
+                    }
+                }
+            }
+        }
+    }   
+}

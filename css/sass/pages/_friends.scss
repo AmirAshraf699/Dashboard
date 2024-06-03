@@ -1,0 +1,80 @@
+.friends {
+    .friends-cards {
+        .friend {
+            @include card-style;
+            .top {
+                i {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $eee-color;
+                    color: $grey-color;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 30px;
+                    margin-right: 5px;
+                    font-size: 14px;
+                    transform: translate(-10px, -10px);
+                }
+            }
+            .profile {
+                text-align: center;
+                transform: translateY(-20px);
+                h4 {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 14px;
+                    color: $grey-color;
+                    margin-top: 5px;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+            .icons {
+                text-align: left;
+                padding: 10px 0;
+                border: {
+                    top: 1px solid $eee-color;
+                    bottom: 1px solid $eee-color;
+                }
+                div {
+                    position: relative;
+                    font-size: 15px;
+                    margin-left: 30px;
+                    &:not(:last-of-type) {
+                        margin-bottom: 15px;
+                    }
+                    &::before {
+                        position: absolute;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -25px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .info {
+                margin-top: 10px;
+                @include flex-between-center;
+                .join {
+                    flex: 1;
+                    font-size: 12px;
+                    color: $grey-color;
+                }
+                .blue, .red {
+                    @include blue-button-no-trans;
+                }
+                .red {
+                    background-color: $red-color;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.main-title {
+    margin-left: 20px;
+    position: relative;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 120px;
+        left: 0;
+        bottom: -10px;
+    }
+    &::before {
+        background-color: white;
+        width: 120px;
+    }
+    &::after {
+        background-color: black;
+        width: 40px;
+    }
+}

@@ -1,0 +1,154 @@
+.Dashboard-content {
+    .row {
+        @include card-style;
+    }
+}
+
+.second-title {
+    h2 {
+        margin: {
+            top: 0;
+            bottom: 5px;
+        }
+    }
+    p {
+        margin-top: 0;
+        font-size: 16px;
+        color: $grey-color;
+    }
+}
+
+.third-title {
+    margin: {
+        top: 0;
+        bottom: 20px;
+    }
+}
+
+.blue-color {
+    color: $blue-color;
+}
+.blue-alt-color {
+    color: $blue-alt-color;
+}
+.orange-color {
+    color: $orange-color;
+}
+.green-color {
+    color: $green-color;
+}
+.red-color {
+    color: $red-color;
+}
+.grey-color {
+    color: $grey-color;
+}
+
+.fourth-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    + p {
+        color: $grey-color;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+}
+
+.check-30-80 {
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    &::after,
+    &::before {
+        display: block;
+        position: absolute;
+        transition: $main-transation;
+    }
+    &::after {
+        content: "";
+        right: 0;
+        top: 0;
+        background-color: $ccc-color;
+        width: 80px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    &::before {
+        content: "\f00d";
+        font: {
+            family: "Font Awesome 5 Free";
+            weight: 900;
+            size: 20px;
+        }
+        color: $ccc-color;
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        top: 3px;
+        right: 52px;
+        z-index: 2;
+        border-radius: 50px;
+        @include flex-center;
+    }
+    &:checked {
+        &::after {
+            background-color: $blue-color;
+        }
+        &::before {
+            content: "\f00c";
+            color: $blue-color;
+            right: 3px;
+        }
+    }
+}
+
+.check-14-100 {
+    appearance: none;
+    position: relative;
+    transform: translate(-50px, 11px);
+    cursor: pointer;
+    &::after,
+    &::before {
+        display: block;
+        position: absolute;
+        transition: $main-transation;
+    }
+    &::after {
+        content: "";
+        background-color: $ccc-color;
+        width: 80px;
+        height: 20px;
+        border-radius: 20px;
+        right: -80px;
+        top: -20px;
+    }
+    &::before {
+        content: "\f00d";
+        font: {
+            family: "Font Awesome 5 Free";
+            weight: 900;
+            size: 12px;
+        }
+        color: $ccc-color;
+        background-color: white;
+        width: 12px;
+        height: 12px;
+        top: -16px;
+        right: -16px;
+        z-index: 2;
+        border-radius: 50px;
+        @include flex-center;
+    }
+    &:checked {
+        &::after {
+            background-color: $blue-color;
+        }
+        &::before {
+            content: "\f00c";
+            color: $blue-color;
+            right: -76px;
+        }
+    }
+}

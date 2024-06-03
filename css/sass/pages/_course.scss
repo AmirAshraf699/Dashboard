@@ -1,0 +1,49 @@
+.courses-holder {
+    position: relative;
+    .course {
+        @include card-style;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        .person {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            img {
+                width: 60px;
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+        }
+        .body {
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            h4 {
+                margin-top: 0;
+            }
+            p {
+                color: $grey-color;
+                font-size: 15px;
+            }
+            padding: 20px;
+            @include border-bottom-eee;
+        }
+        .blue {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include blue-button-no-trans;
+        }
+        .info {
+            padding: 20px;
+            @include flex-between-center;
+            span {
+                font-size: 13px;
+                color: $grey-color;
+            }
+        }
+    }
+}

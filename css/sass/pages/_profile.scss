@@ -1,0 +1,155 @@
+.profile {
+    .body {
+        margin: 20px;
+        gap: 20px;
+        .top {
+            @include card-style;
+            @include flex-align-center;
+            .image {
+                position: relative;
+                width: 250px;
+                text-align: center;
+                img {
+                    width: 120px;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 400px;
+                    background-color: $eee-color;
+                }
+            }
+            .details {
+                flex: 1;
+                .detail {
+                    padding: 15px;
+                    font-size: 14px;
+                    &:not(:last-of-type) {
+                        @include border-bottom-eee;
+                    }
+                    h4 {
+                        width: 100%;
+                        font-weight: normal;
+                        color: $grey-color;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                    .content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        div {
+                            margin-top: 5px;
+                            span {
+                                &.grey {
+                                    color: $grey-color;
+                                }
+                            }
+                        }
+                        input {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            > div {
+                @include card-style;
+            }
+            .skills {
+                width: 300px;
+                .content {
+                    div {
+                        padding: {
+                            top: 20px;
+                            bottom: 20px;
+                        }
+                        span {
+                            @include button-eee;
+                            margin-right: 5px;
+                            font-size: 15px;
+                        }
+                        &:not(:last-of-type) {
+                            @include border-bottom-eee;
+                        }
+                    }
+                }
+            }
+            .activity {
+                flex: 1;
+                .content {
+                    .box {
+                        @include flex-align-center;
+                        img {
+                            width: 60px;
+                            margin-right: 10px;
+                        }
+                        .info {
+                            flex: 1;
+                            h4 {
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                font-weight: normal;
+                            }
+                            p {
+                                margin-top: 0;
+                                color: $grey-color;
+                            }
+                        }
+                        .date {
+                            text-align: right;
+                            color: $grey-color;
+                            p {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .profile {
+        .body {
+            .top{
+                .details {
+                    text-align: center;
+                    .detail {
+                        .content {
+                            flex-direction: column;
+                            div {
+                                &:last-of-type {
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .profile {
+        .body {
+            .bottom {
+                .skills {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

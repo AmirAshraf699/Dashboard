@@ -1,0 +1,108 @@
+.files {
+    margin: 20px;
+    position: relative;
+    .files-holder {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+        .files-stats {
+            @include card-style;
+            .states {
+                min-width: 220px;
+                margin-top: 10px;
+                border: 1px solid $eee-color;
+                padding: 10px;
+                @include flex-between-center;
+                margin-bottom: 10px;
+                border-radius: 6px;
+                i {
+                    width: 40px;
+                    height: 40px;
+                    @include flex-center;
+                }
+                .text {
+                    flex: 1;
+                    margin-left: 10px;
+                    h4 {
+                        font-weight: normal;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        margin-top: 0;
+                    }
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        font-size: 13px;
+                        color: $grey-color;
+                    }
+                }
+                .size {
+                    font-size: 13px;
+                    color: $grey-color;
+                }
+            }
+            .upload {
+                display: block;
+                width: fit-content;
+                margin: 20px auto 0;
+                background-color: $blue-color;
+                color: white;
+                padding: 10px 15px;
+                font-size: 15px;
+                border-radius: 6px;
+                transition: $main-transation;
+                font-weight: bold;
+                &:hover {
+                    background-color: $blue-alt-color;
+                    i {
+                        animation: arrow-up .8s linear infinite;
+                    }
+                }
+            }
+        }
+        .files-content {
+            flex: 1;
+            .card {
+                @include card-style;
+                padding: 10px;
+                position: relative;
+                i {
+                    color: $grey-color;
+                }
+                .image {
+                    text-align: center;
+                    img {
+                        width: 60px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                h5 {
+                    font-weight: normal;
+                    color: $grey-color;
+                    margin-bottom: 0;
+                }
+                hr {
+                    border: 1px solid $eee-color;
+                }
+                .info {
+                    @include flex-between-center;
+                    font-size: 14px;
+                    color: $grey-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .files-holder  {
+        flex-direction: column;
+        .files-stats {
+            width: 100%;
+        }
+    }
+}

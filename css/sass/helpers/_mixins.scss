@@ -1,0 +1,131 @@
+@mixin card-style {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-between {
+    @include flex;
+    justify-content: space-between;
+}
+
+@mixin flex-arround-center {
+    @include flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-between-center {
+    @include flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+@mixin flex-center {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin blue-button {
+    background-color: $blue-color;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    transition: $main-transation;
+
+    &:hover {
+        background-color: $blue-alt-color;
+    }
+
+    border: none;
+}
+
+@mixin blue-button-no-trans {
+    background-color: $blue-color;
+    color: white;
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+@mixin button-eee {
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background-color: #eee;
+    border: none;
+}
+
+@mixin button {
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 6px;
+}
+
+
+@mixin border-bottom-ccc {
+    border-bottom: 1px solid $ccc-color;
+}
+
+@mixin border-bottom-eee {
+    border-bottom: 1px solid #eee;
+}
+
+@mixin margin-10-lf {
+    margin: {
+        left: 10px;
+        right: 10px;
+    }
+}
+
+@mixin margin-20-lf {
+    margin: {
+        left: 20px;
+        right: 20px;
+    }
+}
+
+@mixin checked-mixin {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        transform: translatey(calc(-50% - 2px));
+        cursor: pointer;
+    }
+
+    &::before {
+        height: 16px;
+        width: 16px;
+        content: "";
+        background-color: white;
+    }
+
+    &::after {
+        @include flex-center;
+        width: 20px;
+        height: 20px;
+        background-color: $blue-color;
+        scale: 0;
+        transition: $main-transation;
+        transform-origin: top;
+    }
+
+    &:checked::after {
+        scale: 1;
+    }
+}
