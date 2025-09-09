@@ -1,0 +1,13 @@
+.main-header {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+@media (max-width: 767px) {
+    .main-header {
+        background-color: var(--white);
+        color: var(--blue);
+    }
+}

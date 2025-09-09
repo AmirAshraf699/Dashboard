@@ -1,0 +1,16 @@
+.dasboard-cards {
+    background-color: var(--blue);
+    .card-top {
+        .card-title {
+            color: var(--grey-light);
+        }
+        .card-number {
+             color: var(--black-light);
+        }
+    }
+    .card-bottom {
+        .card-desc {
+            color: var(--grey);
+        }
+    }
+}

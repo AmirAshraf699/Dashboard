@@ -1,0 +1,23 @@
+.sidebar {
+    width: 15rem;
+    background-color: var(--white);
+    color: var(--black-light);
+    overflow: hidden;
+
+    .main-title,
+    .links:not(:last-of-type) {
+        border-bottom: 1px solid var(--white-dark);
+    }
+
+    .links {
+        .second-title {
+            color: var(--grey);
+        }
+
+        .link {
+            transition: var(--transition);
+
+        }
+    }
+
+}
