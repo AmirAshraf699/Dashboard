@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 function Sidebar() {
     return (
         <div>
-            <div className='sidebar min-h-lvh p-5'>
+            <div className='sidebar min-h-lvh h-full p-5'>
                 <div className='main-title pt-3 pb-8 font-bold tracking-widest uppercase'>
                     <h1 className=''>Dashboard</h1>
                 </div>

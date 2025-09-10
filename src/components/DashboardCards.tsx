@@ -62,7 +62,7 @@ function DashboardCards() {
         },
     ]
     return (
-        <div className="dasboard-cards gap-8 pt-20 pb-50 px-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="dasboard-cards gap-8 pt-20 pb-35 px-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cardsData.map((element) => (
                 <div key={element.id} className="bg-white w-full p-5 rounded-sm">
                     <div className="card-top flex justify-between items-center">

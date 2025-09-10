@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import SecondLayout from './layouts/SecondLayout';
-import Dashboard from './components/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import Tables from './pages/Tables'
 import Landing from './pages/Landing';

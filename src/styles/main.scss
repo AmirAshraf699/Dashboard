@@ -2,4 +2,6 @@
 @use "./global" as *;
 @use "./sidebar" as *;
 @use "./main-header" as *;
+@use "./dashboard" as *;
 @use "./dashboard-cards" as *;
+@use "./dashboard-chart-one.scss" as *;
